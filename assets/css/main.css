@@ -124,6 +124,39 @@ a { text-decoration: none; color: inherit; }
   left: 40px;
 }
 
+/* ─── Hero entrance animations ─────────────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateX(40px) scale(0.96); }
+  to   { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+.hero-badge    { animation: heroFadeUp 0.6s ease both; animation-delay: 0.1s; }
+.hero-headline { animation: heroFadeUp 0.6s ease both; animation-delay: 0.25s; }
+.hero-subtitle { animation: heroFadeUp 0.6s ease both; animation-delay: 0.4s; }
+.hero-ctas     { animation: heroFadeUp 0.6s ease both; animation-delay: 0.55s; }
+
+.hero-phone-wrap { animation: heroSlideIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; animation-delay: 0.3s; }
+
+.glow-blob--orange { animation: heroFadeIn 1.2s ease both; animation-delay: 0.2s; }
+.glow-blob--pink   { animation: heroFadeIn 1.2s ease both; animation-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-badge, .hero-headline, .hero-subtitle, .hero-ctas,
+  .hero-phone-wrap, .glow-blob--orange, .glow-blob--pink {
+    animation: none;
+  }
+}
+
 .hero-inner {
   max-width: 1360px;
   margin: 0 auto;
