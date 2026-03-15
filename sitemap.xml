@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://nocode23.github.io/lacto-tracker-web/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nocode23.github.io/lacto-tracker-web/"/>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nocode23.github.io/lacto-tracker-web/index-cs.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://nocode23.github.io/lacto-tracker-web/index-cs.html</loc>
+    <xhtml:link rel="alternate" hreflang="cs" href="https://nocode23.github.io/lacto-tracker-web/index-cs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nocode23.github.io/lacto-tracker-web/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://nocode23.github.io/lacto-tracker-web/privacy-policy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://nocode23.github.io/lacto-tracker-web/privacy-policy-cs.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
