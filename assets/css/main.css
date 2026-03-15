@@ -240,6 +240,22 @@ a { text-decoration: none; color: inherit; }
 
 .btn-hero-primary svg { width: 20px; height: 20px; flex-shrink: 0; }
 
+.appstore-badge {
+  display: inline-block;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.appstore-badge:hover {
+  opacity: 0.82;
+  transform: translateY(-2px);
+}
+
+.appstore-badge img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+
 .btn-hero-ghost {
   font-size: 15px;
   font-weight: 500;
