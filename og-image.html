@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2a0b22 0%, #3B1230 50%, #1f0818 100%);
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+    }
+
+    /* Glow blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    .blob-orange {
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(245,137,31,0.35) 0%, transparent 70%);
+      top: -160px; right: -60px;
+    }
+    .blob-pink {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba(232,82,122,0.28) 0%, transparent 70%);
+      bottom: -140px; left: -60px;
+    }
+
+    /* Layout */
+    .inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 100px;
+      gap: 80px;
+    }
+
+    /* Left: text */
+    .text-col { flex: 1; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 32px;
+      letter-spacing: 0.01em;
+    }
+
+    .badge-dot {
+      width: 7px; height: 7px;
+      background: #F5891F;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    h1 span { color: #FEB96A; }
+
+    p {
+      font-size: 22px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      max-width: 440px;
+    }
+
+    /* Right: phone mockup */
+    .phone-col {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .phone {
+      width: 220px;
+      height: 476px;
+      background: #1C1C1E;
+      border-radius: 40px;
+      padding: 9px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.10),
+        0 0 0 2px rgba(0,0,0,0.5),
+        0 24px 80px rgba(0,0,0,0.7),
+        0 0 60px rgba(245,137,31,0.18);
+      transform: rotate(3deg);
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 33px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+
+    /* Logo + name bottom-left */
+    .brand {
+      position: absolute;
+      bottom: 44px;
+      left: 100px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 2;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 11px;
+    }
+
+    .brand-name {
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: -0.01em;
+    }
+  </style>
+</head>
+<body>
+  <div class="blob blob-orange"></div>
+  <div class="blob blob-pink"></div>
+
+  <div class="inner">
+    <div class="text-col">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Available on the App Store
+      </div>
+      <h1>Every feeding,<br><span>remembered.</span></h1>
+      <p>The simplest breastfeeding tracker for new moms. One tap to start, one tap to stop.</p>
+    </div>
+
+    <div class="phone-col">
+      <div class="phone">
+        <div class="screen">
+          <img src="assets/images/main_screen.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand">
+    <img src="assets/images/app_logo.png" alt="" class="logo" />
+    <span class="brand-name">Lacto Tracker</span>
+  </div>
+
+</body>
+</html>
