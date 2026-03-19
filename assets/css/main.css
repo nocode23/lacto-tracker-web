@@ -832,6 +832,21 @@ a { text-decoration: none; color: inherit; }
   .hero-headline { font-size: 36px; }
   .value-item + .value-item::before { display: none; }
   .value-strip-inner { flex-direction: column; gap: 4px; }
+
+  .nav-name { display: none; }
+
+  .lang-switch {
+    border: 1px solid rgba(255,255,255,0.20);
+    border-radius: 8px;
+    padding: 2px 4px;
+    margin-right: 10px;
+  }
+
+  .lang-link { color: rgba(255,255,255,0.65); }
+  .lang-link.active {
+    color: var(--white);
+    background: rgba(255,255,255,0.14);
+  }
 }
 
 /* ─── Privacy pages ─────────────────────────────────────────── */
