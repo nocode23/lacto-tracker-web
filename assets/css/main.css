@@ -571,7 +571,7 @@ a { text-decoration: none; color: inherit; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--plum);
   margin-bottom: 14px;
 }
 
@@ -602,9 +602,9 @@ a { text-decoration: none; color: inherit; }
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  color: var(--orange);
-  background: rgba(245,137,31,0.10);
-  border: 1px solid rgba(245,137,31,0.20);
+  color: var(--plum);
+  background: rgba(59,18,48,0.07);
+  border: 1px solid rgba(59,18,48,0.15);
   padding: 5px 12px;
   border-radius: 50px;
   letter-spacing: 0.01em;
@@ -821,14 +821,14 @@ a { text-decoration: none; color: inherit; }
 
 .footer-copy {
   font-size: 13px;
-  color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.60);
 }
 
 .footer-links { display: flex; gap: 20px; }
 
 .footer-link {
   font-size: 13px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.65);
   transition: color 0.2s ease;
 }
 
