@@ -405,12 +405,12 @@ body::before {
 .section-title .line { display: block; }
 
 /* ─── Fade-in ───────────────────────────────────────────────── */
-.fade-in {
+.motion-ready .fade-in {
   opacity: 0;
   transform: translateY(26px);
   transition: opacity .65s ease, transform .65s ease;
 }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+.motion-ready .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* ─── Sticky Showcase ───────────────────────────────────────── */
 #showcase {
@@ -957,4 +957,12 @@ body::before {
   #privacy-content { padding: 60px 24px 80px; }
   .privacy-lead  { padding: 22px 20px; }
   .privacy-section { padding: 20px 18px; gap: 14px; }
+}
+
+html:not(.motion-ready) .feature-card { opacity: 1; transform: none; }
+:focus-visible { outline: 3px solid #F5891F; outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .motion-ready .fade-in, .feature-card { opacity: 1; transform: none; }
 }

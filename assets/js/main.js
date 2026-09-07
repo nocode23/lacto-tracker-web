@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  if (!('IntersectionObserver' in window)) return;
 
   /* ── 1. Nav scroll ───────────────────────────────────────── */
   const nav = document.getElementById('nav');
@@ -46,7 +47,7 @@
     dot.addEventListener('click', () => {
       const idx = parseInt(dot.dataset.index, 10);
       setActiveStep(idx);
-      steps[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      steps[idx].scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
     });
   });
 
@@ -77,4 +78,5 @@
     cardObserver.observe(card);
   });
 
+  document.documentElement.classList.add('motion-ready');
 })();
